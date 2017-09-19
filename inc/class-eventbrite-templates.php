@@ -218,6 +218,7 @@
 			'twentythirteen',
 			'twentyfourteen',
 			'twentyfifteen',
+            'greater-manchester-east-county-scout-council',
 		);
 
 		return in_array( get_template(), $default_themes );

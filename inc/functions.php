@@ -111,7 +111,7 @@ function eventbrite_paging_nav( $events = null ) {
 	}
 
 	// Output our markup. ?>
-	<nav class="navigation paging-navigation pagination" role="navigation">
+	<nav class="eventbrite navigation paging-navigation pagination" role="navigation">
 		<h1 class="screen-reader-text"><?php esc_html_e( 'Events navigation', 'eventbrite' ); ?></h1>
 		<div class="nav-links">
 			<?php echo paginate_links( apply_filters( 'eventbrite_paginate_links_args', $args, $events ) ); ?>
@@ -408,9 +408,9 @@ function eventbrite_ticket_form_widget() {
 	), '//eventbrite.com/tickets-external' );
 
 	// Assemble our ticket info HTML.
-	$ticket_html = sprintf( '<div class="eventbrite-widget"><iframe src="%1$s" height="%2$s" width="100%%" frameborder="0" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe></div>',
+	$ticket_html = sprintf( '<div class="eventbrite-widget"><iframe src="%1$s" height="%2$s" frameborder="0" vspace="0" hspace="0" marginheight="5" marginwidth="5" allowtransparency="true"></iframe></div>',
 		esc_url( $src ),
-		esc_attr( eventbrite_get_ticket_form_widget_height() )
+		esc_attr( eventbrite_get_ticket_form_widget_height() + 10 )
 	);
 
 	// Output the markup.
@@ -428,7 +428,7 @@ function eventbrite_get_ticket_form_widget_height() {
 	$sales_open = false;
 
 	// Set the starting height: includes the header (50), dates/sales (39+23), and call-to-action (75).
-	$height = 190;
+	$height = 210;
 
 	// Get tickets for the current event.
 	$tickets = get_post()->tickets;

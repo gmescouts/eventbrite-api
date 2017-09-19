@@ -1,12 +1,12 @@
 <?php
 
 /*
-Plugin Name: Eventbrite API
-Plugin URI: https://github.com/Automattic/eventbrite-api
-Description: A WordPress plugin that integrates the Eventbrite API with WordPress and Keyring.
-Version: 1.0.11
-Author: Automattic
-Author URI: http://automattic.com
+Plugin Name: Eventbrite API (GME Scouts)
+Plugin URI: https://github.com/gmescouts/eventbrite-api
+Description: A fork of the Automattic WordPress plugin that integrates the Eventbrite API with WordPress and Keyring.
+Version: 1.0.12
+Author: GME Scouts
+Author URI: http://gmescouts.org.uk
 License: GPL v2 or newer <https://www.gnu.org/licenses/gpl.txt>
 */
 

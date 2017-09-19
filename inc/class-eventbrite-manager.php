@@ -70,7 +70,7 @@ class Eventbrite_Manager {
 		// If we get back a proper response, cache it.
 		if ( ! is_wp_error( $request ) ) {
 			$transient_name = $this->get_transient_name( $endpoint, $params );
-			set_transient( $transient_name, $request, apply_filters( 'eventbrite_cache_expiry', DAY_IN_SECONDS ) );
+			set_transient( $transient_name, $request, apply_filters( 'eventbrite_cache_expiry', MINUTE_IN_SECONDS ) );
 			$this->register_transient( $transient_name );
 		}
 
